@@ -1,0 +1,48 @@
+CREATE DATABASE test;
+USE test;
+
+CREATE DATABASE test2;
+
+SHOW DATABASES;
+
+DROP DATABASE test2;
+
+
+USE test;
+
+--create table--
+
+--- Command to create a TABLE
+Create table if not exists employee
+(
+    id int,
+    name VARCHAR(50)
+);
+
+SHOW TABLES;
+
+
+SHOW CREATE TABLE employee;
+
+DROP Table employee;
+
+Create table if not exists employee
+(
+    id int,
+    name VARCHAR(50),
+    salary DOUBLE,
+    hiring_date DATE
+);
+
+--- Syntax 1 To insert data into a TABLE
+INSERT INTO  employee VALUES(1,'rishi',25000,'2021-06-14');
+
+--- This statement will fail--
+INSERT INTO  employee VALUES('rishi',1,25000,'2021-06-14');
+
+INSERT INTO  employee(salary,name,id) VALUES(20000,'sumit',2);
+INSERT INTO  employee values(3,'Amit',3000,'2021-09-15'),(4,'Niting',3500,'2021-09-16'),(5,'Kajal',4000,'2021-09-20');
+ 
+--- Use select command to query the data
+ SELECT * from employee;
+ SELECT id,NAME FROM employee;
